@@ -2,5 +2,5 @@
 
 echo I: Creating kernel symlinks.
 cd /boot
-ln -s initrd.img-* initrd.img
-ln -s vmlinuz-* vmlinuz
+ln -s initrd.img-$KERNEL_VERSION initrd.img
+ln -s vmlinuz-$KERNEL_VERSION vmlinuz
