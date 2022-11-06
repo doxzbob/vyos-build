@@ -2,5 +2,8 @@
 
 echo I: Creating kernel symlinks.
 cd /boot
+
+KERNEL_VERSION=$(find /boot -name "vmlinuz-*" | sed "s/.*vmlinuz-\(.*\)/\1/g" | sort -r | head -n 1)
+
 ln -s initrd.img-$KERNEL_VERSION initrd.img
 ln -s vmlinuz-$KERNEL_VERSION vmlinuz
